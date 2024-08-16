@@ -1,10 +1,9 @@
 import * as Yup from 'yup';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import css from './ContactForm.module.css';
-// import { nanoid } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
-// import { addContact } from '../../redux/contacts/contactsSlice';
-import { addContactThunk } from '../../redux/contactsOps';
+import { addContactThunk } from '../../redux/auth/operations';
+
 
 const initValues = {
   name: '',
