@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { lazy, Suspense, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { refreshUser } from '../../redux/auth/operations';
-import { PrivateRoute } from '../PrivateRoute/PrivateRoute';
-import { RestrictedRoute } from '../RestrictedRoute/RestrictedRoute';
 import Loader from '../Loader/Loader';
 import { selectIsRefreshing } from '../../redux/auth/selectors';
+import RestrictedRoute from '../RestrictedRoute/RestrictedRoute';
+import PrivateRoute from '../PrivateRoute/PrivateRoute';
 
 const Layout = lazy(() => import('../Layout/Layout'));
 const HomePage = lazy(() => import('../../pages/HomePage/HomePage'));
