@@ -1,24 +1,11 @@
 .header {
-display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: aquamarine;
-    color: white;
-    align-items: center;
-    margin-bottom: 20px;
-    font-weight: bold;
-    border-bottom: 1px solid #2a363b;
-  }
-  
-  .list {
-    display: flex;
-    gap: 20px;
-    list-style-type: none;
-    li{
-      a{
-        color:white;
-        text-decoration: none;
-  
-      }
-    }
-  }
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: peachpuff;
+  color: white;
+  align-items: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+
+}

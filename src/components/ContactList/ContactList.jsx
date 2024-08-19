@@ -7,7 +7,7 @@ import { selectFilteredContacts } from '../../redux/contacts/selectors';
 
 
 
-export default function ContactList() {
+const ContactList = () => {
   const contacts = useSelector(selectFilteredContacts);
   const dispatch = useDispatch();
   const filter = useSelector(selectNameFilter) || '';
@@ -29,4 +29,6 @@ export default function ContactList() {
       ))}
     </ul>
   );
-}
+};
+
+export default ContactList;
