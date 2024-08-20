@@ -4,15 +4,16 @@ import { Link } from 'react-router-dom';
 import { register } from '../../redux/auth/operations';
 import css from './RegistrationForm.module.css';
 
+
+const initialValues = {
+  name: '',
+  email: '',
+  password: '',
+};
+
 const RegistrationForm = () => {
-  const initialValues = {
-    name: '',
-    email: '',
-    password: '',
-  };
   const dispatch = useDispatch();
   const handleSubmit = (values, options) => {
-    console.log(values);
     dispatch(register(values));
     options.resetForm();
   };

@@ -1,8 +1,7 @@
 import { Field, Form, Formik } from 'formik';
-import { useDispatch, useSelector } from 'react-redux';
-import { Link, Navigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { login } from '../../redux/auth/operations';
-import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import css from './LoginForm.module.css';
 
 const initialValues = {
@@ -11,16 +10,12 @@ const initialValues = {
 };
 
 const LoginForm = () => {
-  const isLoggedIn = useSelector(selectIsLoggedIn);
   const dispatch = useDispatch();
   const handleSubmit = (values, options) => {
     dispatch(login(values));
-    console.log(values);
     options.resetForm();
   };
-  if (isLoggedIn) {
-    return <Navigate to="/" />;
-  }
+
   return (
     <div className={css.wrapper}>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
